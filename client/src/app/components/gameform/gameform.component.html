@@ -1,0 +1,29 @@
+<div class="conteiner">
+		<mat-card class="contenido_carta" >
+			<mat-form-field appearance="outline">
+				<mat-label>Espacio para un titulo</mat-label>
+				<input matInput  [(ngModel)]="game.title" autofocus >
+			</mat-form-field>
+			<mat-form-field appearance="outline">
+				<mat-label>Descripcion</mat-label>
+				<textarea [(ngModel)]="game.description" matInput autofocus ></textarea>
+			</mat-form-field>
+			<mat-form-field appearance="outline">
+				<mat-label>URL de imagen</mat-label>
+				<input [(ngModel)]="game.image" matInput autofocus >
+			</mat-form-field>
+			<button mat-raised-button color="primary" (click)="edit ? updateGame() : saveNewGame()" >Guardar </button>
+		</mat-card>
+
+		<mat-card class="contenido_carta" >
+			<mat-card-header>
+				<mat-card-title>{{game.title == '' ? 'No hay titulo': game.title }}
+				</mat-card-title>
+			</mat-card-header>
+			<img mat-card-image class="imagen_carta" [src]="game.image == '' ? '/assets/no-image.png' : game.image " alt="Photo of a Shiba Inu">
+			<mat-card-content>
+				<p class="descripcion_carta">{{game.description == ''? 'Coloca una descripcion': game.description }}</p>
+				<p>{{game.created_at | date: 'yyyy-MM-dd'}}</p>
+			</mat-card-content>
+		</mat-card>
+</div>

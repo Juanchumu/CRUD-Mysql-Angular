@@ -1,0 +1,22 @@
+<div class="conteiner">
+
+@for(game of games; track game.id ){
+<mat-card class="contenido_carta">
+	<mat-card-header>
+		<mat-card-title class="titulo_carta" >{{game.title}}</mat-card-title>
+	</mat-card-header>
+	<img class="imagen_carta" mat-card-image [src]="game.image" alt="error en la imagen" >
+	<mat-card-content>
+		<p class="descripcion_carta" >{{game.description}}</p>
+		<span>{{game.created_at | date : 'yyyy-MM-dd' }}</span>
+	</mat-card-content>
+	<mat-card-footer class="botones_carta">
+		<!--  Nota en la barra de router, para permanecer en la ruta -->
+		<button mat-raised-button color="accent" [routerLink]="['/game-edit', game.id]" >EDITAR</button>
+		<button mat-raised-button color="warn" (click)="deleteGame(game.id)" >BORRAR</button>
+
+	</mat-card-footer>
+</mat-card>
+
+}
+</div>

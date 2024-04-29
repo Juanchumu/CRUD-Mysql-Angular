@@ -1,0 +1,26 @@
+.contenido_carta {
+	max-width: 200px;
+	margin: 15px;
+	padding-bottom: 10px;
+}
+.conteiner{
+	padding: 15px;
+	display:flex;
+	flex-flow: row wrap;
+
+}
+.imagen_carta{
+	max-height: 100px;
+	min-width: 200px;
+}
+.titulo_carta{
+	max-height: 40px;
+}
+.descripcion_carta{
+	height: 50px;
+	max-height: 100px;
+}
+.botones_carta{
+	max-height: 50px;
+	margin: auto;
+}

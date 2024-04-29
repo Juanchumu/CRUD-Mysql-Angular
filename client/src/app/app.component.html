@@ -1,0 +1,18 @@
+
+<p>
+  <mat-toolbar>
+    <span>CRUD Juegos</span>
+    <span class="example-spacer"></span>
+    <button [routerLink]="['game-list']"  mat-icon-button >
+      <mat-icon>home</mat-icon>
+    </button>
+    <button [routerLink]="['game-add']"  mat-icon-button ><mat-icon>add</mat-icon></button>
+    <button [routerLink]="['info']"  mat-icon-button ><mat-icon>info</mat-icon></button>
+  </mat-toolbar>
+</p>
+
+
+<div class="conteiner"> 
+
+<router-outlet></router-outlet>
+</div>
